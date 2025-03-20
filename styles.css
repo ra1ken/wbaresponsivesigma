@@ -1,0 +1,244 @@
+.domy {
+    display: flex;
+    flex-wrap: wrap;  /* Ensures items wrap into multiple rows */
+    justify-content: space-between;  /* Pushes items to the edges */
+    align-items: stretch; /* Ensures all items have equal height */
+    gap: 0;  /* Removes extra space */
+    width: 100%;  /* Ensures it spans the full parent container */
+    max-width: 90vw; /* Prevents it from being too wide */
+    margin: 3rem auto 0; /* Centers the container */
+}
+
+.domy img {
+    flex: 1 1 calc(50% - 5px);  /* Each image takes 50% of the row */
+    max-width: calc(50% - 5px); /* Ensures they don't overflow */
+    height: auto;  /* Maintains aspect ratio */
+    object-fit: cover;  /* Crops if needed */
+    scale: 0.95;
+}
+
+
+
+.domy img:nth-child(3) {
+    grid-column: span 2; 
+    justify-self: center;
+
+}
+.rd{
+
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+
+.plusy{
+    text-align: center;
+    margin-top: 3rem;
+    color: #7A9D8C;
+text-align: center;
+font-family: Roboto;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 114.286% */
+}
+
+.svgtext{
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.svgtext p {
+    color: #050706;
+text-align: center;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 133.333% */
+}
+
+.svgtext img{
+    display: block;
+    margin: 0 auto;
+
+}
+
+.predposlednidum{
+    
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+}
+.predposlednidum img{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 65.62%, rgba(0, 0, 0, 0.40) 100%), url(<path-to-image>) lightgray -112.644px 0px / 174.837% 100% no-repeat;
+}
+
+.dum1text {
+    padding: 2rem;
+    background: var(--Secondary-gradient, linear-gradient(42deg, #ABA8BF 0%, #F5E9F3 38.5%));
+    border-radius: 10px;
+}
+
+.dum1text p {
+    color: #050706;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+
+.poslednidum{
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.poslednidum img{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    scale: 1.2;
+}
+
+
+.lastimage {
+    width: 100%;
+    order: 1;
+}
+
+.offset {
+    position: relative;
+    width: 100%;
+}
+
+.offsetbg {
+        display: block;
+        position: absolute;
+        top: 150px;
+        right: 100px;
+        width: 80%;
+        height: 60%;
+        background: linear-gradient(42deg, #ABA8BF 0%, #F5E9F3 38.5%);
+        border-radius: 10px;
+        z-index: -1;
+
+}
+
+.offset img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.dum2text p {
+    color: #050706;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+margin-bottom: 10rem;
+}
+
+@media screen and (min-width: 700px) {
+
+.domy{
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+}
+
+.svgtext{
+
+    margin-top: 3rem;
+  grid-template-columns:  repeat(4, 1fr);
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+}
+
+@media screen and (min-width: 950px) {
+
+    .predposlednidum{
+        flex-direction: row;
+        align-self: stretch;
+    }
+
+    .dum1text{
+        flex: 1; /* Allows the text container to take up equal space */
+    display: flex;
+    align-items: center; /* Vertically centers the text inside */
+    background: #f8ebf6; /* Match your background */
+    padding: 20px;
+    border-radius: 10px;
+    }
+
+    .predposlednidum img {      
+        flex: 1;
+
+   
+    }
+
+
+    .poslednidum img{
+        display: block;
+        width: 100%;
+
+    }
+
+
+
+    .poslednidum{
+        flex-direction: row-reverse;
+        align-self: stretch;
+    }
+
+    .dum2text {
+        flex: 1; /* Allows the text container to take up equal space */
+    display: flex;
+    align-items: center; /* Vertically centers the text inside */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 0;
+    max-width: 50%;
+    }
+
+    .imadz{
+        flex: 1;
+        scale: 1!important;
+    }
+    .dum2text p{
+        color: #050706;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+    }
+
+    .poslednidumimage{
+        width: 50%;
+        position: relative;
+        display: inline-block; /* Keeps it tight around the image */
+    }
+
+}
