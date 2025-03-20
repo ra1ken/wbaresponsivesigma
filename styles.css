@@ -19,6 +19,7 @@
 
 
 
+
 .domy img:nth-child(3) {
     grid-column: span 2; 
     justify-self: center;
@@ -241,4 +242,41 @@ line-height: 28px; /* 175% */
         display: inline-block; /* Keeps it tight around the image */
     }
 
+    @media screen and (min-width: 950px) and (max-width: 2700px ) {
+        
+        .last-image{
+            width: 50%;
+        }
+
+        .offsetbg{
+            top:120px;
+            right: 80px
+        }
+
+        .predposlednidum{
+            max-width: 100%;
+            padding: 2rem;
+        }
+
+        .poslednidum{
+            max-width: 100%;
+        }
+    }
+
+
+
+
+    
+
+}
+
+@media screen and (max-device-width: 800px) {
+    .offsetbg {
+        display: none !important;
+    }
+}
+
+*{
+    max-width: 1121px;
+    margin: 0 auto!important;
 }
